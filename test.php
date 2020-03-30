@@ -36,9 +36,8 @@
         echo "<tr><td>$i</td><td>$a</td></tr>";
     };
     echo '</table>';
-
-
     ?>
+    <? php ?>
 </body>
 
 </html>
