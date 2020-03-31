@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background: cornflowerblue;
+    }
+</style>
 
 <body>
     <?php
@@ -36,8 +43,17 @@
         echo "<tr><td>$i</td><td>$a</td></tr>";
     };
     echo '</table>';
+
     ?>
-    <? php ?>
+    <?php if ($i > 0) { ?>
+        <h2>html</h2>
+    <?php } else { ?>
+        <div></div>
+    <?php } ?>
 </body>
+<script>
+    // JSON.pars轉為物件
+    // JSON.stringify轉為字串
+</script>
 
 </html>
