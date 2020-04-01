@@ -43,13 +43,30 @@
         echo "<tr><td>$i</td><td>$a</td></tr>";
     };
     echo '</table>';
-
+    $b = [
+        'one' => 'like',
+        'age' => 20,
+    ];
+    foreach ($b as $key => $val) {
+        echo "$key =&gt; $val<br>";
+    }
     ?>
     <?php if ($i > 0) { ?>
         <h2>html</h2>
     <?php } else { ?>
         <div></div>
     <?php } ?>
+    <pre> <!-- 顯示程式碼 -->
+    <?php
+    $a = [7, 6, [8, 3]];
+    $a[] = 'eve';
+    // $r=&$a加&為參照
+    // $f=$a不加&為複製
+    print_r($a);
+    var_dump($a); //顯示物件屬性
+
+    ?>
+    </pre>
 </body>
 <script>
     // JSON.pars轉為物件
