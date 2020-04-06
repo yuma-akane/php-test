@@ -3,19 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
-<style>
-    div {
-        width: 100px;
-        height: 100px;
-        background: cornflowerblue;
-    }
-</style>
+
+
 
 <body>
+
+    <?php include __DIR__ . '';  ?>
     <?php
+    // phpinfo();查看PHP資料的呼叫函式(平時不會用)
+    // php的結尾式會被VScode簡化
     echo 4 + 9; //echo輸出、顯示
     // +只做數值的相加
     echo PHP_VERSION . '<br>';
@@ -68,9 +66,5 @@
     ?>
     </pre>
 </body>
-<script>
-    // JSON.pars轉為物件
-    // JSON.stringify轉為字串
-</script>
 
 </html>
