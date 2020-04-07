@@ -17,12 +17,12 @@
 // print_r($_POST);
 ?>
 </pre>
-    <from action="" name="form1" class="row" onsubmit="return cont()">
-        <input id="a" class="form-control col-3" type="number">+<input id="a" class="form-control col-3" type="number">
+    <form action="" name="form1" class="row" onsubmit="return cont()">
+        <input id="a" class="form-control col-3" type="number">+<input id="b" class="form-control col-3" type="number">
         <button class="btn btn-primary mx-2">=</button> <!-- button的預設值是submit -->
         <input id="c" class="form-control col-3" type="text">
-    </from>
-    <!-- from的屬性novalidate不檢查輸入值是否府和表單格式 -->
+    </form>
+    <!-- form的屬性novalidate不檢查輸入值是否府和表單格式 -->
     <!-- <form novalidate method="post">
         <div class="form-group">
             label點選名稱能使表單連動
@@ -50,12 +50,13 @@
     // JSON.stringify轉為字串
     function cont() {
         $.post('json.php', {
-                a: 10,
-                b: 20
-            }),
-            function(data) {
-                console.log(data), 'json'
-            };
+            a: document.querySelector('#a').value,
+            b: $('#b').val()
+        }, function(data) {
+            console.log(data);
+            $('#c').val(data.c);
+        }, 'json');
+
         return false;
     };
 </script>
