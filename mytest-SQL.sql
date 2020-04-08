@@ -24,6 +24,8 @@ SELECT `name` FROM `member_list` WHERE 1
 --選欄位,表單
 UPDATE `member_list` SET `tel`=[2345678]] WHERE 1
 DELETE FROM `member_list` WHERE 0
+SELECT `name` FROM `member_list`ORDER BY 'X'ASC,'y' DESC
+--ORDER BY'x'資料依x排序   ASC小至大/DESC大至小
 --WHERE 1or0/判斷是否提取資料
 --LIMIT 6,5從第6筆開始,拿5筆資料
 
