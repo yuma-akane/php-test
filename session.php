@@ -9,9 +9,29 @@ if (!isset($_SESSION)) {
     $_SESSION["val"] = 1;
 }
 echo $_SESSION["val"];*/
+$vip = [
+    'go' => [
+        'name' => 'GO',
+        'pw' => '0000'
+    ],
+    'test' => [
+        'name' => 'TEST',
+        'pw' => '0000'
+    ],
+    'akane' => [
+        'name' => 'AKANE',
+        'pw' => '0000'
+    ]
+];
 if (isset($_POST['id']) and isset($_POST['pass'])) {
-    if ($_POST['id'] == 'go' and $_POST['pass'] == '0000') {
-        $_SESSION['login'] = 'Akane';
+    if (
+        !empty($_POST['id'] == $vip[$_POST['id']])
+        and $_POST['pass'] === $vip[$_POST['id']]['pw']
+    ) {
+        $_SESSION['login'] = [
+            'id' => $_POST['id'],
+            'name' => $vip[$_POST['id']]['name']
+        ];
     };
 };
 ?>
