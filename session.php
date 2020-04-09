@@ -57,8 +57,14 @@ if (isset($_POST['id']) and isset($_POST['pass'])) {
             <input type="password" name="pass" placeholder="pass"><br>
             <input type="submit">
         </form>
+        <td><?= strip_tags($r['address']) ?></td>
     <?php endif;
     //記得加
+    /*<td><?= strip_tags($r['address']) ?></td>
+    strip_tags刪除HTML標籤
+    <td><?= htmlentities($r['address']) ?></td>
+    htmlentities可以直接顯示特殊字符
+    */
     ?>
 </body>
 <!-- SQL
